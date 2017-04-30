@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SoftmindWebservicesModelStoreContainer" CdmEntityContainer="SoftmindWebservicesEntities">
+    <EntitySetMapping Name="Samples">
+      <EntityTypeMapping TypeName="SoftmindWebservicesModel.Sample">
+        <MappingFragment StoreEntitySet="Sample">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="SoftmindWebservicesModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetTodayMessage" FunctionName="SoftmindWebservicesModel.Store.GetTodayMessage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SoftmindWebservicesModel.GetTodayMessage_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
